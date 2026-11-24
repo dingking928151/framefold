@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>框外一分钟 · 同一幅画,两种真相</title>
+<meta name="description" content="先看局部猜标题,拉开取景框看真相,再亲手裁一个框考考别人。三幅原创插画,一个关于取景的 LifeHack 小游戏。">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg-lights" aria-hidden="true"><i class="l1"></i><i class="l2"></i><i class="l3"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="brand" href="./" id="brandLink">
+    <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span class="brand-text">框外一分钟<small>ONE MINUTE OUTSIDE THE FRAME</small></span>
+  </a>
+  <nav class="level-nav" id="levelNav" aria-label="关卡"></nav>
+  <div class="top-actions">
+    <span class="badge" id="challengeBadge" hidden>朋友出的题</span>
+    <button class="icon-btn" id="helpBtn" aria-label="玩法说明" title="玩法说明">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.2 9a2.9 2.9 0 1 1 4.4 2.5c-1 .6-1.6 1.2-1.6 2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17.6" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+    </button>
+    <button class="icon-btn" id="soundBtn" aria-label="声音开关" aria-pressed="true" title="声音开关">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/>
+        <g id="soundOnIcon"><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+        <g id="soundOffIcon" hidden><path d="M16.5 9.5l5 5M21.5 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="stage-wrap rise" style="--d:.05s">
+    <div class="stage-meta">
+      <span class="rec"><i></i>REC</span>
+      <span id="metaScene">SCENE 01</span>
+      <span id="metaFocal">105mm</span>
+      <span id="metaRect" class="meta-rect"></span>
+      <button class="chip-btn" id="gridBtn" aria-pressed="false" title="九宫格参考线">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3v18M15 3v18M3 9h18M3 15h18" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        九宫格
+      </button>
+    </div>
+
+    <div class="viewport" id="viewport" tabindex="0" aria-label="取景画面">
+      <div class="film" id="film">
+        <img id="filmImg" alt="待揭晓的场景插画" draggable="false">
+        <div class="pins" id="pins"></div>
+      </div>
+      <div class="thirds" id="thirds" hidden aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="crop-overlay" id="cropOverlay" hidden>
+        <div class="crop-rect" id="cropRect">
+          <b class="handle" data-h="nw"></b><b class="handle" data-h="n"></b><b class="handle" data-h="ne"></b>
+          <b class="handle" data-h="e"></b><b class="handle" data-h="se"></b><b class="handle" data-h="s"></b>
+          <b class="handle" data-h="sw"></b><b class="handle" data-h="w"></b>
+        </div>
+      </div>
+      <div class="flash" id="flash" aria-hidden="true"></div>
+      <div class="frame-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="stage-hint" id="stageHint">局部 · 等待你的判断</div>
+      <div class="loader" id="loader"><span class="reel"></span>装片中…</div>
+    </div>
+
+    <div class="stage-bar" id="stageBar" hidden></div>
+  </section>
+
+  <section class="panel rise" style="--d:.15s">
+    <!-- 猜题 -->
+    <div class="card" id="panelGuess" hidden>
+      <p class="kicker" id="guessKicker">第 01 关 · 只看局部</p>
+      <h1 class="question" id="guessQuestion"></h1>
+      <div class="author-quote" id="authorQuote" hidden>
+        <span class="quote-label">出题人给这个局部起的标题</span>
+        <p class="quote-title" id="authorTitle"></p>
+      </div>
+      <div class="choices" id="choices"></div>
+      <p class="fine-note" id="guessNote">两个标题都来自画面里真实可见的证据。选一个你相信的,然后拉开取景框。</p>
+    </div>
+
+    <!-- 揭晓 -->
+    <div class="card" id="panelReveal" hidden>
+      <p class="verdict" id="verdict"></p>
+      <div class="truth-block">
+        <span class="truth-label" id="truthLabel">全景真相</span>
+        <h2 class="truth-title" id="truthTitle"></h2>
+      </div>
+      <p class="reveal-text" id="revealText"></p>
+      <p class="credit" id="sceneCredit"></p>
+      <div class="clue-list" id="clueList" aria-label="画面证据"></div>
+      <p class="clue-detail" id="clueDetail" hidden></p>
+      <div class="actions" id="revealActions"></div>
+    </div>
+
+    <!-- 出题 -->
+    <div class="card" id="panelCreate" hidden>
+      <p class="kicker">我来出题 · 裁一个会骗人的框</p>
+      <h1 class="question small">框住局部,起一个有歧义的标题</h1>
+      <label class="field-label" for="titleInput">你的标题(1–48 个字符)</label>
+      <div class="title-row">
+        <input id="titleInput" type="text" autocomplete="off" placeholder="例如:悬崖边的紧急救援" aria-describedby="titleCount">
+        <span class="counter" id="titleCount">0/48</span>
+      </div>
+      <p class="field-label">接收者先看到的局部</p>
+      <div class="preview" id="preview" aria-label="接收者视角预览">
+        <div class="film" id="previewFilm"><img id="previewImg" alt="" draggable="false"></div>
+        <div class="frame-corners mini" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="link-row" id="linkRow">
+        <input id="linkOutput" type="text" readonly placeholder="输入标题后生成挑战链接" aria-label="挑战链接">
+        <button class="btn ghost" id="copyBtn" disabled>复制</button>
+      </div>
+      <div class="actions">
+        <button class="btn primary" id="passBtn" disabled>本机传给下一位</button>
+        <button class="btn ghost" id="backBtn">返回关卡</button>
+      </div>
+      <p class="fine-note">链接打开后先猜再揭晓,同一台设备也可以直接传递。拖动画面里的取景框,或用下方按钮与方向键调整。</p>
+    </div>
+
+    <!-- 加载失败 -->
+    <div class="card" id="panelError" hidden>
+      <p class="kicker">装片失败</p>
+      <h1 class="question small" id="errorText">资源加载出错</h1>
+      <div class="actions"><button class="btn primary" id="retryBtn">重新加载</button></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot rise" style="--d:.25s">
+  <span>三幅场景插画、全部代码与文案均为本项目原创 · 无线上图片依赖</span>
+  <span class="foot-dim">本地开发预览 · 未公开发布 · 无需登录</span>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<dialog id="helpDialog" aria-labelledby="helpTitle">
+  <div class="dialog-head">
+    <h2 id="helpTitle">怎么玩</h2>
+    <button class="icon-btn" id="helpClose" aria-label="关闭">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <ol class="help-steps">
+    <li><b>猜</b> —— 首屏只给局部。两个标题都来自可见证据,选一个你相信的。</li>
+    <li><b>看</b> —— 取景框拉开,同一幅画的远处线索会解释刚才的误读。点编号证据可以推近查看。</li>
+    <li><b>出题</b> —— 亲手拖一个取景框,起一个有歧义的标题,把链接发给朋友;打开链接的人先猜再揭晓。</li>
+  </ol>
+  <p class="help-keys">出题时:方向键移动取景框 · Shift+方向键微调 · + / − 缩放 · 拖动边角手柄改变大小</p>
+  <p class="fine-note">插画与代码均为本项目原创。分享只写在网址片段里,不上传任何内容。</p>
+</dialog>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

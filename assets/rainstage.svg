@@ -1,0 +1,340 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <title>雨夜舞台 · 造雨现场</title>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070d22"/>
+      <stop offset="0.6" stop-color="#101a38"/>
+      <stop offset="1" stop-color="#1c2748"/>
+    </linearGradient>
+    <linearGradient id="boards" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#333a48"/>
+      <stop offset="1" stop-color="#232833"/>
+    </linearGradient>
+    <linearGradient id="wet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a5c80"/>
+      <stop offset="0.25" stop-color="#354462"/>
+      <stop offset="1" stop-color="#232c42"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#cfe4ff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#cfe4ff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="umb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e05545"/>
+      <stop offset="0.6" stop-color="#c0392b"/>
+      <stop offset="1" stop-color="#8e2418"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3d6069"/>
+      <stop offset="0.5" stop-color="#2e4a52"/>
+      <stop offset="1" stop-color="#22383f"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#dfe9ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#dfe9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vign2" cx="0.5" cy="0.46" r="0.78">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#04060f" stop-opacity="0.45"/>
+    </radialGradient>
+    <filter id="grain2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="bokeh"><feGaussianBlur stdDeviation="2.6"/></filter>
+    <filter id="soft3"><feGaussianBlur stdDeviation="3.5"/></filter>
+  </defs>
+
+  <!-- 夜空 -->
+  <rect width="1200" height="720" fill="url(#night)"/>
+  <g fill="#dfe9ff">
+    <circle cx="90" cy="70" r="1.6" opacity="0.7"/>
+    <circle cx="240" cy="46" r="1.2" opacity="0.5"/>
+    <circle cx="420" cy="66" r="1.4" opacity="0.6"/>
+    <circle cx="640" cy="40" r="1.2" opacity="0.5"/>
+    <circle cx="820" cy="80" r="1.6" opacity="0.7"/>
+    <circle cx="1010" cy="52" r="1.3" opacity="0.55"/>
+    <circle cx="1140" cy="96" r="1.5" opacity="0.6"/>
+    <circle cx="320" cy="110" r="1.1" opacity="0.4"/>
+    <circle cx="760" cy="120" r="1.1" opacity="0.4"/>
+  </g>
+  <ellipse cx="1080" cy="120" rx="90" ry="90" fill="url(#moonGlow)"/>
+  <circle cx="1080" cy="120" r="26" fill="#e8eeff" opacity="0.9"/>
+  <circle cx="1072" cy="114" r="6" fill="#c9d4ee" opacity="0.6"/>
+  <circle cx="1090" cy="128" r="4" fill="#c9d4ee" opacity="0.5"/>
+
+  <!-- 远处校园轮廓与灯火 -->
+  <path d="M0 360 L0 330 L90 330 L90 306 L160 306 L160 336 L250 336 L250 318 L330 318 L330 344 L420 344 L420 326 L520 326 L520 348 L640 348 L640 312 L720 312 L720 340 L830 340 L830 322 L930 322 L930 346 L1040 346 L1040 300 L1120 300 L1120 338 L1200 338 L1200 360 Z" fill="#0b1226"/>
+  <g filter="url(#bokeh)">
+    <circle cx="120" cy="322" r="4" fill="#f5b95e" opacity="0.75"/>
+    <circle cx="196" cy="330" r="3" fill="#7fd0e8" opacity="0.6"/>
+    <circle cx="292" cy="328" r="4" fill="#f5b95e" opacity="0.7"/>
+    <circle cx="452" cy="336" r="3" fill="#f58a5e" opacity="0.6"/>
+    <circle cx="586" cy="338" r="4" fill="#f5b95e" opacity="0.65"/>
+    <circle cx="676" cy="326" r="3" fill="#7fd0e8" opacity="0.6"/>
+    <circle cx="788" cy="334" r="4" fill="#f5b95e" opacity="0.7"/>
+    <circle cx="878" cy="330" r="3" fill="#f58a5e" opacity="0.55"/>
+    <circle cx="1078" cy="316" r="4" fill="#f5b95e" opacity="0.7"/>
+    <circle cx="1160" cy="330" r="3" fill="#7fd0e8" opacity="0.55"/>
+  </g>
+  <rect x="0" y="356" width="1200" height="204" fill="#0d1428"/>
+
+  <!-- 舞台木地板 -->
+  <rect x="0" y="560" width="1200" height="160" fill="url(#boards)"/>
+  <g stroke="#1a1f29" stroke-width="2.5" opacity="0.8">
+    <line x1="0" y1="592" x2="1200" y2="592"/>
+    <line x1="0" y1="630" x2="1200" y2="630"/>
+    <line x1="0" y1="674" x2="1200" y2="674"/>
+    <line x1="180" y1="560" x2="140" y2="720"/>
+    <line x1="500" y1="560" x2="480" y2="720"/>
+    <line x1="860" y1="560" x2="900" y2="720"/>
+    <line x1="1120" y1="560" x2="1160" y2="720"/>
+  </g>
+  <!-- 雨区内的湿地面 -->
+  <rect x="340" y="560" width="380" height="160" fill="url(#wet)"/>
+  <g opacity="0.35" stroke="#8fb4dc" stroke-width="2">
+    <line x1="380" y1="566" x2="372" y2="640"/>
+    <line x1="470" y1="566" x2="466" y2="668"/>
+    <line x1="540" y1="566" x2="544" y2="650"/>
+    <line x1="630" y1="566" x2="638" y2="636"/>
+    <line x1="690" y1="566" x2="696" y2="620"/>
+  </g>
+  <!-- 倒影 -->
+  <g opacity="0.14" filter="url(#soft3)">
+    <path d="M380 570 Q 500 600 620 570 L600 596 Q 500 620 400 596 Z" fill="#c0392b"/>
+    <rect x="478" y="572" width="44" height="70" rx="10" fill="#3d6069"/>
+  </g>
+  <g fill="none" stroke="#a9c8e8" stroke-width="1.6" opacity="0.5">
+    <ellipse cx="430" cy="586" rx="16" ry="4"/>
+    <ellipse cx="560" cy="604" rx="22" ry="5"/>
+    <ellipse cx="640" cy="580" rx="12" ry="3"/>
+    <ellipse cx="500" cy="640" rx="28" ry="6"/>
+  </g>
+  <!-- 干区胶带与杂物 -->
+  <g stroke="#e8c33d" stroke-width="5" opacity="0.8">
+    <path d="M168 636 l22 22 M190 636 l-22 22"/>
+    <path d="M906 660 l20 20 M926 660 l-20 20"/>
+  </g>
+  <g>
+    <rect x="128" y="512" width="72" height="10" rx="3" fill="#3a3226"/>
+    <rect x="136" y="522" width="8" height="66" fill="#2c261c"/>
+    <rect x="184" y="522" width="8" height="66" fill="#2c261c"/>
+    <rect x="138" y="498" width="44" height="14" rx="2" fill="#d8d2c2"/>
+    <rect x="142" y="494" width="44" height="14" rx="2" fill="#e9e3d3"/>
+    <g stroke="#a9a08a" stroke-width="1.5">
+      <line x1="148" y1="499" x2="178" y2="499"/>
+      <line x1="148" y1="503" x2="174" y2="503"/>
+    </g>
+    <rect x="216" y="548" width="14" height="22" rx="3" fill="#c8bfae"/>
+    <path d="M230 552 q 8 4 0 12" fill="none" stroke="#c8bfae" stroke-width="3"/>
+    <path d="M220 542 q 2 -6 0 -10 M226 542 q 2 -6 0 -10" stroke="#8a94a8" stroke-width="2" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- 顶部桁架与聚光灯 -->
+  <g>
+    <rect x="40" y="14" width="280" height="12" rx="4" fill="#2c3138"/>
+    <g stroke="#2c3138" stroke-width="4">
+      <line x1="60" y1="26" x2="80" y2="46"/>
+      <line x1="120" y1="26" x2="140" y2="46"/>
+      <line x1="200" y1="26" x2="220" y2="46"/>
+      <line x1="260" y1="26" x2="280" y2="46"/>
+    </g>
+    <g transform="rotate(24 176 52)">
+      <rect x="150" y="30" width="52" height="46" rx="8" fill="#1c2026"/>
+      <rect x="154" y="70" width="44" height="10" rx="3" fill="#0e1114"/>
+      <ellipse cx="176" cy="80" rx="20" ry="6" fill="#dfe9ff" opacity="0.9"/>
+    </g>
+    <path d="M168 78 L382 560 L662 560 L212 70 Z" fill="url(#beam)"/>
+    <path d="M178 80 L440 560 L600 560 L204 76 Z" fill="#dfe9ff" opacity="0.06"/>
+  </g>
+
+  <!-- 造雨横杆与支架 -->
+  <g>
+    <rect x="321" y="118" width="9" height="482" rx="3" fill="#7d848c"/>
+    <rect x="731" y="118" width="9" height="482" rx="3" fill="#7d848c"/>
+    <path d="M298 600 L352 600 L326 574 Z" fill="#5d646c"/>
+    <path d="M708 600 L762 600 L736 574 Z" fill="#5d646c"/>
+    <rect x="321" y="112" width="420" height="12" rx="6" fill="#c9ced4"/>
+    <rect x="321" y="112" width="420" height="4" rx="2" fill="#e8ecf0" opacity="0.8"/>
+    <g fill="#b08d4f">
+      <rect x="374" y="124" width="12" height="14" rx="2"/>
+      <rect x="444" y="124" width="12" height="14" rx="2"/>
+      <rect x="514" y="124" width="12" height="14" rx="2"/>
+      <rect x="584" y="124" width="12" height="14" rx="2"/>
+      <rect x="654" y="124" width="12" height="14" rx="2"/>
+    </g>
+    <g fill="#8a6c38">
+      <path d="M372 138 l16 0 l-3 8 l-10 0 Z"/>
+      <path d="M442 138 l16 0 l-3 8 l-10 0 Z"/>
+      <path d="M512 138 l16 0 l-3 8 l-10 0 Z"/>
+      <path d="M582 138 l16 0 l-3 8 l-10 0 Z"/>
+      <path d="M652 138 l16 0 l-3 8 l-10 0 Z"/>
+    </g>
+    <!-- 供水软管与阀门 -->
+    <path d="M741 118 C 780 130, 800 220, 806 340 C 810 440, 818 500, 836 540" fill="none" stroke="#3f6f92" stroke-width="9" stroke-linecap="round"/>
+    <path d="M741 118 C 780 130, 800 220, 806 340 C 810 440, 818 500, 836 540" fill="none" stroke="#7fb2d4" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="842" cy="548" r="15" fill="#c8352b"/>
+    <circle cx="842" cy="548" r="6" fill="#7c1a12"/>
+    <g stroke="#7c1a12" stroke-width="4">
+      <line x1="842" y1="534" x2="842" y2="562"/>
+      <line x1="828" y1="548" x2="856" y2="548"/>
+    </g>
+  </g>
+
+  <!-- 雨幕 -->
+  <g stroke="#9fc8e8" stroke-linecap="round">
+    <g opacity="0.5" stroke-width="1.8">
+      <path d="M380 148 L368 340 M380 148 L380 420 M380 148 L392 380"/>
+      <path d="M450 148 L438 360 M450 148 L450 460 M450 148 L462 400"/>
+      <path d="M520 148 L508 380 M520 148 L520 480 M520 148 L532 420"/>
+      <path d="M590 148 L578 360 M590 148 L590 470 M590 148 L602 410"/>
+      <path d="M660 148 L648 380 M660 148 L660 440 M660 148 L672 400"/>
+    </g>
+    <g opacity="0.3" stroke-width="1.3">
+      <path d="M374 200 L362 520 M388 240 L398 540"/>
+      <path d="M444 220 L432 540 M458 260 L468 550"/>
+      <path d="M514 210 L502 540 M528 250 L538 552"/>
+      <path d="M584 230 L572 540 M598 270 L608 548"/>
+      <path d="M654 210 L644 530 M668 250 L678 545"/>
+    </g>
+    <g opacity="0.65" stroke-width="2">
+      <path d="M380 148 L376 220"/>
+      <path d="M450 148 L446 236"/>
+      <path d="M520 148 L516 228"/>
+      <path d="M590 148 L586 240"/>
+      <path d="M660 148 L656 224"/>
+    </g>
+  </g>
+  <!-- 溅落的水花 -->
+  <g fill="none" stroke="#bcd8ee" stroke-width="1.6" opacity="0.6">
+    <path d="M362 558 q 6 -8 12 0 M374 558 q 4 -5 8 0"/>
+    <path d="M444 558 q 6 -8 12 0 M456 558 q 4 -5 8 0"/>
+    <path d="M514 558 q 6 -8 12 0 M526 558 q 4 -5 8 0"/>
+    <path d="M584 558 q 6 -8 12 0 M596 558 q 4 -5 8 0"/>
+    <path d="M654 558 q 6 -8 12 0 M666 558 q 4 -5 8 0"/>
+  </g>
+
+  <!-- 撑伞的人 -->
+  <g>
+    <!-- 伞柄与手 -->
+    <line x1="500" y1="248" x2="500" y2="330" stroke="#5d4a32" stroke-width="5"/>
+    <path d="M500 330 q 0 12 -12 12" fill="none" stroke="#5d4a32" stroke-width="5" stroke-linecap="round"/>
+    <!-- 伞面 -->
+    <path d="M360 255 Q 380 190 500 180 Q 620 190 640 255 Q 605 240 570 252 Q 535 240 500 252 Q 465 240 430 252 Q 395 240 360 255 Z" fill="url(#umb)"/>
+    <g stroke="#8e2418" stroke-width="2.5" fill="none" opacity="0.8">
+      <path d="M500 182 L430 252"/>
+      <path d="M500 182 L570 252"/>
+      <path d="M500 182 L360 255"/>
+      <path d="M500 182 L640 255"/>
+    </g>
+    <path d="M380 236 Q 420 196 498 188" stroke="#ff9a86" stroke-width="4" fill="none" opacity="0.55" stroke-linecap="round"/>
+    <line x1="500" y1="180" x2="500" y2="168" stroke="#5d4a32" stroke-width="4" stroke-linecap="round"/>
+    <!-- 伞沿滴水 -->
+    <g stroke="#9fc8e8" stroke-width="1.6" opacity="0.7" stroke-linecap="round">
+      <path d="M366 258 l-2 14"/>
+      <path d="M432 256 l-1 16"/>
+      <path d="M570 256 l1 14"/>
+      <path d="M636 258 l2 16"/>
+    </g>
+    <!-- 头部 -->
+    <circle cx="500" cy="290" r="15" fill="#e8b98f"/>
+    <path d="M485 286 C 486 272, 512 270, 515 284 L513 290 C 508 280, 492 280, 487 292 Z" fill="#1c1613"/>
+    <path d="M492 296 q 4 2 8 0" stroke="#b0764a" stroke-width="2" fill="none"/>
+    <!-- 围巾(被风吹向左侧) -->
+    <path d="M492 306 C 470 310, 448 306, 428 314 C 418 318, 414 326, 420 330 C 436 326, 458 322, 480 318 Z" fill="#e8a33d"/>
+    <path d="M428 314 l-14 4 l4 10 l14 -6 Z" fill="#d18f2c"/>
+    <rect x="486" y="300" width="28" height="12" rx="5" fill="#e8a33d"/>
+    <!-- 长风衣 -->
+    <path d="M478 310 C 470 340, 468 380, 472 420 C 466 442, 448 458, 424 468 L436 478 C 458 472, 472 462, 480 450 L484 470 L520 470 L524 420 C 530 380, 528 340, 522 310 C 508 302, 490 302, 478 310 Z" fill="url(#coat)"/>
+    <path d="M500 312 L500 468" stroke="#1c2e34" stroke-width="3"/>
+    <g fill="#c9b98a">
+      <circle cx="506" cy="336" r="2.4"/>
+      <circle cx="506" cy="364" r="2.4"/>
+      <circle cx="506" cy="392" r="2.4"/>
+    </g>
+    <path d="M478 312 C 474 340, 472 380, 474 416" stroke="#9fd4ee" stroke-width="3" fill="none" opacity="0.5"/>
+    <!-- 举伞的手臂 -->
+    <path d="M516 316 C 512 322, 506 326, 500 328 L502 338 C 512 336, 520 330, 524 322 Z" fill="#2e4a52"/>
+    <ellipse cx="501" cy="330" rx="7" ry="6" fill="#e8b98f"/>
+    <!-- 腿与鞋 -->
+    <rect x="486" y="468" width="13" height="86" rx="5" fill="#1c242e"/>
+    <rect x="505" y="468" width="13" height="86" rx="5" fill="#232c38"/>
+    <path d="M484 552 l18 0 l3 10 l-24 0 Z" fill="#0e1114"/>
+    <path d="M503 552 l18 0 l5 10 l-25 0 Z" fill="#15181c"/>
+  </g>
+
+  <!-- 前景雨丝(人物之前) -->
+  <g stroke="#bcd8ee" stroke-width="1.4" opacity="0.28" stroke-linecap="round">
+    <path d="M400 300 L392 470"/>
+    <path d="M470 330 L464 500"/>
+    <path d="M545 310 L540 480"/>
+    <path d="M615 330 L610 500"/>
+    <path d="M690 300 L684 460"/>
+  </g>
+
+  <!-- 鼓风机 -->
+  <g>
+    <rect x="1010" y="486" width="9" height="112" rx="3" fill="#5d646c"/>
+    <path d="M982 598 L1046 598 L1014 570 Z" fill="#4a5058"/>
+    <circle cx="1014" cy="430" r="58" fill="#1c2026"/>
+    <circle cx="1014" cy="430" r="58" fill="none" stroke="#3d444c" stroke-width="6"/>
+    <circle cx="1014" cy="430" r="46" fill="#0e1114"/>
+    <g fill="#3d444c" opacity="0.9">
+      <path d="M1014 430 L1000 392 Q 1014 384 1028 392 Z"/>
+      <path d="M1014 430 L1046 448 Q 1044 464 1030 466 Z"/>
+      <path d="M1014 430 L982 448 Q 984 464 998 466 Z"/>
+    </g>
+    <circle cx="1014" cy="430" r="10" fill="#5d646c"/>
+    <g stroke="#3d444c" stroke-width="2" opacity="0.8">
+      <line x1="960" y1="410" x2="1068" y2="410"/>
+      <line x1="958" y1="430" x2="1070" y2="430"/>
+      <line x1="960" y1="450" x2="1068" y2="450"/>
+    </g>
+    <rect x="1064" y="414" width="26" height="34" rx="6" fill="#2c3138"/>
+    <!-- 风线 -->
+    <g stroke="#9fd4ee" stroke-width="2.5" fill="none" opacity="0.3" stroke-linecap="round">
+      <path d="M952 414 C 880 402, 800 402, 726 412"/>
+      <path d="M952 434 C 870 430, 790 434, 716 444"/>
+      <path d="M952 454 C 884 462, 810 466, 740 462"/>
+    </g>
+  </g>
+
+  <!-- 场记板 -->
+  <g>
+    <rect x="1146" y="416" width="8" height="184" rx="3" fill="#5d646c"/>
+    <path d="M1122 600 L1178 600 L1150 574 Z" fill="#4a5058"/>
+    <g transform="rotate(-4 1150 372)">
+      <rect x="1104" y="336" width="94" height="76" rx="5" fill="#15181c"/>
+      <g transform="rotate(-16 1104 336)">
+        <rect x="1104" y="322" width="94" height="15" rx="3" fill="#15181c"/>
+        <g fill="#e9e3d3">
+          <path d="M1110 322 l12 0 l-6 15 l-12 0 Z"/>
+          <path d="M1134 322 l12 0 l-6 15 l-12 0 Z"/>
+          <path d="M1158 322 l12 0 l-6 15 l-12 0 Z"/>
+          <path d="M1182 322 l12 0 l-6 15 l-12 0 Z"/>
+        </g>
+      </g>
+      <text x="1151" y="366" text-anchor="middle" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#e9e3d3">第三幕 · 雨夜</text>
+      <text x="1151" y="392" text-anchor="middle" font-family="Consolas,monospace" font-size="13" fill="#9aa1a9">SC 3 · TK 2</text>
+      <line x1="1112" y1="374" x2="1190" y2="374" stroke="#3d444c" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- 蹲着调阀门的场务 -->
+  <g>
+    <path d="M872 500 C 862 520, 860 544, 868 562 L896 566 C 902 546, 902 524, 896 506 C 888 498, 880 496, 872 500 Z" fill="#3a4a3e"/>
+    <path d="M868 562 C 862 570, 862 580, 868 586 L898 586 C 902 578, 900 570, 896 566 Z" fill="#2c3830"/>
+    <path d="M872 510 C 862 522, 852 534, 846 544 L854 552 C 862 542, 872 532, 880 522 Z" fill="#3a4a3e"/>
+    <ellipse cx="849" cy="548" rx="7" ry="6" fill="#e8b98f"/>
+    <circle cx="884" cy="490" r="14" fill="#e8b98f"/>
+    <path d="M870 486 C 872 472, 896 472, 898 486 L898 490 L870 490 Z" fill="#c8352b"/>
+    <rect x="868" y="486" width="32" height="6" rx="3" fill="#a02419"/>
+    <path d="M866 586 l-6 8 h22 l-4 -8 Z" fill="#15181c"/>
+    <path d="M892 586 l-2 8 h22 l-8 -8 Z" fill="#15181c"/>
+    <rect x="890" y="520" width="8" height="20" rx="3" fill="#e8c33d"/>
+  </g>
+
+  <!-- 氛围 -->
+  <rect width="1200" height="720" fill="url(#vign2)"/>
+  <rect width="1200" height="720" filter="url(#grain2)" opacity="0.06"/>
+</svg>

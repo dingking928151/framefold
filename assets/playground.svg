@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <title>操场上的纸船 · 纸船拼成的鲸鱼</title>
+  <defs>
+    <linearGradient id="track" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8452e"/>
+      <stop offset="0.6" stop-color="#a53a26"/>
+      <stop offset="1" stop-color="#8e2f1f"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#478750"/>
+      <stop offset="1" stop-color="#3a6f40"/>
+    </linearGradient>
+    <linearGradient id="tarp" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#3d8fd6"/>
+      <stop offset="0.5" stop-color="#2e7fc2"/>
+      <stop offset="1" stop-color="#1b5e9e"/>
+    </linearGradient>
+    <radialGradient id="warmSun" cx="0.2" cy="0.08" r="0.95">
+      <stop offset="0" stop-color="#ffd9a0" stop-opacity="0.16"/>
+      <stop offset="0.55" stop-color="#ffd9a0" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vign" cx="0.5" cy="0.46" r="0.75">
+      <stop offset="0.62" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0a0d12" stop-opacity="0.34"/>
+    </radialGradient>
+    <pattern id="speck" width="13" height="13" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1" fill="#ffffff" opacity="0.07"/>
+      <circle cx="9" cy="8" r="1" fill="#000000" opacity="0.09"/>
+    </pattern>
+    <filter id="soft2"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <g id="boatA">
+      <ellipse cx="32" cy="37" rx="27" ry="5" fill="#0e3a66" opacity="0.3"/>
+      <path d="M9 24 L17 13 L25 24 Z" fill="#e8ecf0"/>
+      <path d="M39 24 L47 13 L55 24 Z" fill="#e8ecf0"/>
+      <path d="M32 3 L17 24 L47 24 Z" fill="#2f6fd1"/>
+      <path d="M32 3 L32 24" stroke="#1d4fa0" stroke-width="1.6"/>
+      <path d="M6 24 L58 24 L46 37 L18 37 Z" fill="#f4f6f8"/>
+      <path d="M6 24 L58 24 L54 29 L10 29 Z" fill="#2f6fd1"/>
+      <path d="M18 37 L32 30 L46 37" stroke="#c9d4e2" stroke-width="1" fill="none"/>
+    </g>
+    <g id="boatB">
+      <ellipse cx="32" cy="37" rx="27" ry="5" fill="#0e3a66" opacity="0.3"/>
+      <path d="M9 24 L17 13 L25 24 Z" fill="#dfe6ee"/>
+      <path d="M39 24 L47 13 L55 24 Z" fill="#dfe6ee"/>
+      <path d="M32 3 L17 24 L47 24 Z" fill="#f4f6f8"/>
+      <path d="M32 3 L32 24" stroke="#c9d4e2" stroke-width="1.6"/>
+      <path d="M6 24 L58 24 L46 37 L18 37 Z" fill="#2f6fd1"/>
+      <path d="M6 24 L58 24 L54 29 L10 29 Z" fill="#1d4fa0"/>
+      <path d="M18 37 L32 30 L46 37" stroke="#1d4fa0" stroke-width="1" fill="none"/>
+    </g>
+  </defs>
+
+  <!-- 干燥的红色塑胶操场 -->
+  <rect width="1200" height="720" fill="url(#track)"/>
+  <rect width="1200" height="720" fill="url(#speck)"/>
+  <rect width="1200" height="64" fill="url(#grass)"/>
+  <rect y="62" width="1200" height="5" fill="#f2f2ee" opacity="0.9"/>
+  <g stroke="#f2f2ee" stroke-width="5" opacity="0.7">
+    <line x1="0" y1="612" x2="1200" y2="612"/>
+    <line x1="0" y1="650" x2="1200" y2="650"/>
+    <line x1="0" y1="688" x2="1200" y2="688"/>
+  </g>
+  <g fill="#f2f2ee" opacity="0.45" font-family="Arial, sans-serif" font-size="26" font-weight="bold">
+    <text x="52" y="642">4</text>
+    <text x="52" y="680">5</text>
+  </g>
+
+  <!-- 蓝色防水布:近看像水面,远看布边露馅 -->
+  <path d="M138 574 C 400 582, 800 578, 1086 566" stroke="#4a1a0e" stroke-width="10" opacity="0.25" fill="none" filter="url(#soft2)"/>
+  <path d="M142 116 C 400 104, 800 100, 1078 108 C 1090 260, 1092 420, 1086 562 C 800 574, 400 578, 138 570 C 130 420, 132 260, 142 116 Z" fill="url(#tarp)"/>
+  <g stroke="#8fc3e8" stroke-width="12" opacity="0.16" fill="none">
+    <path d="M150 210 C 400 200, 800 216, 1080 206"/>
+    <path d="M146 280 C 420 272, 780 288, 1084 278"/>
+    <path d="M144 350 C 400 342, 820 356, 1086 348"/>
+    <path d="M142 420 C 430 412, 790 428, 1086 418"/>
+    <path d="M140 490 C 400 482, 810 496, 1084 488"/>
+  </g>
+  <g fill="#ffffff" opacity="0.22">
+    <ellipse cx="300" cy="240" rx="26" ry="4"/>
+    <ellipse cx="420" cy="330" rx="24" ry="4"/>
+    <ellipse cx="620" cy="320" rx="34" ry="5"/>
+    <ellipse cx="860" cy="260" rx="22" ry="4"/>
+    <ellipse cx="480" cy="460" rx="28" ry="4"/>
+    <ellipse cx="760" cy="500" rx="24" ry="4"/>
+  </g>
+  <g stroke="#123c66" stroke-width="3" opacity="0.16" fill="none">
+    <path d="M160 150 C 500 190, 800 140, 1070 170"/>
+    <path d="M150 540 C 480 500, 820 550, 1080 520"/>
+  </g>
+  <path d="M300 120 C 340 300, 320 450, 360 566" stroke="#a8d0ec" stroke-width="7" opacity="0.12" fill="none"/>
+  <path d="M142 116 L206 112 L150 176 Z" fill="#7db8dc"/>
+  <path d="M142 116 L150 176" stroke="#123c66" stroke-width="2" opacity="0.3"/>
+  <path d="M1086 562 L1022 566 L1080 502 Z" fill="#7db8dc"/>
+  <path d="M1086 562 L1080 502" stroke="#123c66" stroke-width="2" opacity="0.3"/>
+  <rect x="580" y="100" width="64" height="14" fill="#cfd4da" opacity="0.85" transform="rotate(-2 612 107)"/>
+  <rect x="560" y="566" width="64" height="14" fill="#cfd4da" opacity="0.85" transform="rotate(2 592 573)"/>
+  <ellipse cx="1033" cy="562" rx="30" ry="6" fill="#123c66" opacity="0.3"/>
+  <rect x="1006" y="532" width="54" height="26" rx="3" fill="#7a4a32"/>
+  <rect x="1006" y="532" width="54" height="7" rx="3" fill="#96604a"/>
+  <rect x="150" y="128" width="54" height="26" rx="3" fill="#7a4a32"/>
+  <rect x="150" y="128" width="54" height="7" rx="3" fill="#96604a"/>
+
+  <!-- 数十只纸船拼成的鲸鱼(由本项目脚本按轮廓布点) -->
+  <g id="whale-boats">
+    <use href="#boatB" transform="translate(259.2 257.0) rotate(-46.0) scale(0.89) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(282.5 221.1) rotate(-47.0) scale(0.94) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(318.3 197.8) rotate(-21.0) scale(0.96) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(360.1 184.8) rotate(-5.8) scale(1.02) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(403.8 179.9) rotate(-2.9) scale(0.89) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(447.7 178.7) rotate(-2.5) scale(1.02) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(491.7 179.8) rotate(4.4) scale(0.92) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(535.7 178.8) rotate(3.1) scale(1.08) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(579.6 176.4) rotate(-0.1) scale(1.04) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(609.0 145.8) rotate(-45.2) scale(1.04) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(636.9 172.2) rotate(47.7) scale(1.03) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(677.8 186.1) rotate(12.7) scale(0.90) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(719.7 199.2) rotate(22.4) scale(0.90) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(761.0 214.5) rotate(32.0) scale(1.00) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(799.2 236.2) rotate(26.4) scale(0.97) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(836.4 259.7) rotate(38.6) scale(0.93) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(871.7 285.9) rotate(35.1) scale(1.03) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(905.4 277.8) rotate(-42.2) scale(1.06) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(938.9 249.3) rotate(-44.1) scale(0.95) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(972.4 220.7) rotate(-44.7) scale(0.97) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(972.7 234.5) rotate(-47.8) scale(1.00) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(953.1 273.9) rotate(-51.8) scale(0.94) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(928.1 308.9) rotate(-34.6) scale(1.08) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(906.9 335.5) rotate(38.3) scale(0.95) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(979.3 442.5) rotate(51.0) scale(0.93) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(877.9 377.3) rotate(31.4) scale(1.04) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(836.7 390.1) rotate(-20.5) scale(1.03) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(795.6 405.8) rotate(-23.8) scale(0.97) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(754.7 422.1) rotate(-20.5) scale(0.91) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(713.4 437.0) rotate(-16.5) scale(1.02) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(671.2 449.6) rotate(-18.5) scale(1.03) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(628.5 459.8) rotate(-10.8) scale(0.99) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(585.2 467.5) rotate(-7.9) scale(0.91) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(541.6 473.2) rotate(-7.5) scale(1.02) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(497.7 476.2) rotate(-6.5) scale(0.99) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(453.9 476.4) rotate(3.6) scale(1.04) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(410.1 472.0) rotate(5.1) scale(0.91) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(367.3 462.9) rotate(13.2) scale(1.02) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(325.3 449.7) rotate(15.4) scale(0.94) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(289.3 424.9) rotate(32.5) scale(0.89) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(263.7 391.2) rotate(51.9) scale(1.04) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(251.6 349.4) rotate(47.9) scale(1.04) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(250.2 305.4) rotate(45.1) scale(0.88) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(428.0 200.0) rotate(1.6) scale(0.96) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(492.0 200.0) rotate(5.8) scale(0.95) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(556.0 200.0) rotate(-8.0) scale(0.96) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(620.0 200.0) rotate(6.4) scale(0.92) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(588.0 254.0) rotate(-2.6) scale(0.91) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(652.0 254.0) rotate(-2.7) scale(0.98) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(716.0 254.0) rotate(-7.8) scale(1.05) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(780.0 254.0) rotate(2.6) scale(0.92) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(364.0 308.0) rotate(-4.9) scale(0.92) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(428.0 308.0) rotate(4.1) scale(0.97) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(556.0 308.0) rotate(-0.3) scale(0.96) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(620.0 308.0) rotate(2.9) scale(0.93) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(684.0 308.0) rotate(0.3) scale(0.94) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(748.0 308.0) rotate(2.7) scale(0.95) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(812.0 308.0) rotate(-3.5) scale(1.08) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(396.0 362.0) rotate(7.1) scale(0.95) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(588.0 362.0) rotate(-4.7) scale(0.98) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(652.0 362.0) rotate(-2.1) scale(0.97) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(716.0 362.0) rotate(-7.4) scale(0.90) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(780.0 362.0) rotate(-1.5) scale(1.06) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(844.0 362.0) rotate(2.0) scale(1.07) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(908.0 362.0) rotate(6.6) scale(0.92) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(556.0 416.0) rotate(2.2) scale(0.97) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(620.0 416.0) rotate(1.6) scale(0.91) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(684.0 416.0) rotate(4.6) scale(0.91) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(350.0 246.0) rotate(-3.2) scale(1.08) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(430.0 242.0) rotate(7.0) scale(0.98) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(490.0 248.0) rotate(-5.1) scale(0.89) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(350.0 424.0) rotate(4.9) scale(0.98) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(430.0 430.0) rotate(-7.1) scale(0.98) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(495.0 426.0) rotate(7.2) scale(0.97) translate(-32 -20)"/>
+  </g>
+  <!-- 鲸鱼的眼睛:一只深蓝色小船 -->
+  <g>
+    <path d="M282 310 L322 310 L314 320 L290 320 Z" fill="#142c56"/>
+    <path d="M302 296 L292 310 L312 310 Z" fill="#142c56"/>
+    <circle cx="298" cy="304" r="1.6" fill="#7db8dc" opacity="0.8"/>
+  </g>
+
+  <!-- 蹲在布边、正放下最后一只纸船的同学 -->
+  <g>
+    <ellipse cx="1080" cy="588" rx="60" ry="11" fill="#5e1f12" opacity="0.35"/>
+    <path d="M1095 540 L1108 505 L1112 578" stroke="#2e3f66" stroke-width="24" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M1085 540 L1038 508 L1052 578" stroke="#3a4d7a" stroke-width="24" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <rect x="1036" y="576" width="36" height="11" rx="5" fill="#f2f2ee"/>
+    <rect x="1098" y="576" width="36" height="11" rx="5" fill="#f2f2ee"/>
+    <path d="M1072 490 L1050 505 L1040 512" stroke="#e8e8e2" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M1092 538 L1060 475" stroke="#f2f2ee" stroke-width="36" fill="none" stroke-linecap="round"/>
+    <path d="M1066 502 L1092 490" stroke="#2e3f66" stroke-width="5" fill="none"/>
+    <path d="M1058 480 L1010 452 L968 430" stroke="#f2f2ee" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M1046 466 l8 12 l10 -10 Z" fill="#d9553f"/>
+    <circle cx="1048" cy="452" r="16" fill="#e8b48c"/>
+    <path d="M1032 448 C1033 435,1045 429,1057 433 C1065 437,1067 445,1066 451 C1059 441,1041 441,1032 448 Z" fill="#2a2622"/>
+    <circle cx="1038" cy="453" r="1.6" fill="#2a2622"/>
+    <use href="#boatA" transform="translate(940 402) rotate(-12) scale(0.95) translate(-32 -20)"/>
+    <ellipse cx="964" cy="428" rx="9" ry="7" fill="#e8b48c"/>
+  </g>
+
+  <!-- 纸箱、散纸与鲸鱼图案纸 -->
+  <g>
+    <ellipse cx="125" cy="684" rx="62" ry="10" fill="#5e1f12" opacity="0.35"/>
+    <path d="M70 596 L46 576 L92 584 Z" fill="#c9a672"/>
+    <path d="M178 596 L202 574 L156 584 Z" fill="#c9a672"/>
+    <use href="#boatA" transform="translate(96 584) rotate(-8) scale(0.72) translate(-32 -20)"/>
+    <use href="#boatB" transform="translate(128 578) rotate(5) scale(0.72) translate(-32 -20)"/>
+    <use href="#boatA" transform="translate(156 586) rotate(-4) scale(0.72) translate(-32 -20)"/>
+    <path d="M70 596 L178 596 L170 676 L78 676 Z" fill="#b08d5f"/>
+    <path d="M70 596 L178 596 L176 610 L72 610 Z" fill="#9a784e"/>
+    <rect x="210" y="600" width="54" height="40" fill="#f4f1e8" transform="rotate(-10 237 620)"/>
+    <path d="M214 620 L262 612" stroke="#d8d2c2" stroke-width="1.5" transform="rotate(-10 237 620)"/>
+    <rect x="250" y="648" width="50" height="36" fill="#efe9dc" transform="rotate(7 275 666)"/>
+    <rect x="36" y="620" width="44" height="32" fill="#f4f1e8" transform="rotate(-14 58 636)"/>
+    <g transform="rotate(-7 338 644)">
+      <rect x="300" y="596" width="76" height="96" fill="#f7f0e0" stroke="#d8cdb4" stroke-width="1.5"/>
+      <polygon points="250,300 262,244 296,206 350,186 420,178 500,180 560,178 585,176 612,142 640,176 700,192 760,214 820,248 862,278 884,296 985,210 940,300 900,330 940,362 982,448 876,376 858,382 800,404 730,432 650,456 560,472 470,478 390,470 320,448 272,412 252,362"
+        transform="translate(309 622) scale(0.062)" fill="none" stroke="#2f6fd1" stroke-width="30" opacity="0.8"/>
+      <path d="M310 668 L366 668 M310 678 L352 678" stroke="#b8ad92" stroke-width="2"/>
+    </g>
+    <rect x="388" y="668" width="64" height="7" fill="#e8b23c" transform="rotate(12 420 671)"/>
+    <path d="M452 676 l12 4 l-10 6 Z" fill="#e8b48c" transform="rotate(12 420 671)"/>
+  </g>
+
+  <rect width="1200" height="720" fill="url(#warmSun)"/>
+  <rect width="1200" height="720" fill="url(#vign)"/>
+</svg>
